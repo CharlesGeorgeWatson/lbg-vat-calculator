@@ -5,7 +5,7 @@ pipeline {
     stage('Checkout') {
       steps {
         //  Get some code from a GitHub repo
-        git branch: 'main', url: 'https://github.com/CharlesGeorgeWatson/lbg-vat-calculator.git'
+        git branch: 'main', url: 'https://github.com/CharlesGeorgeWatson/lbg-vat-calculator'
       }
     }
     stage('SonarQube Analysis') {
@@ -13,7 +13,7 @@ pipeline {
         scannerHome = tool 'sonarqube'
       }
       steps {
-        withSonarQubeEnv('sonar-qube-1') {
+        withSonarQubeEnv('sonar-qube-charles') {
           sh "${scannerHome}/bin/sonar-scanner"
         }
       }
