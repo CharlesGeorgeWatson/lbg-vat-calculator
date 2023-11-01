@@ -6,7 +6,7 @@ pipeline {
     stage('Checkout') {
         steps {
           // Get some code from a GitHub repository
-          git branch: 'main', url: 'https://github.com/CharlesGeorgeWatson/lbg-gradsFORK'
+          git branch: 'main', url: 'https://github.com/CharlesGeorgeWatson/lbg-vat-calculator'
         }
     }
     stage('Install') {
